@@ -43,12 +43,6 @@ MONGO_PASS=your_mongodb_password
 DATABASE_NAME=sylvr_finance
 ```
 
-To exclude secrets from this repo:
-
-```bash
-echo ".env" >> .gitignore
-```
-
 ---
 
 ## 🧪 Sample Prompts (Try these in UI)
