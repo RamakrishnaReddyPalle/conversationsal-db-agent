@@ -1,0 +1,72 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+*.egg
+*.log
+
+# === Environment ===
+.env
+.env.*
+
+# === Jupyter Notebooks Checkpoints ===
+.ipynb_checkpoints/
+
+# === VSCode / PyCharm / IDE Config ===
+.vscode/
+.idea/
+*.swp
+
+# === Operating System Files ===
+.DS_Store
+Thumbs.db
+
+# === Virtual Environments ===
+venv/
+.venv/
+env/
+ENV/
+.sylvr-env/
+.sylvr-venv/
+
+# === Model Checkpoints & HuggingFace Caches ===
+model/
+models/
+*.ckpt
+*.pt
+*.bin
+*.safetensors
+*.onnx
+*.tflite
+*.pb
+*.h5
+tokenizer_config.json
+generation_config.json
+pytorch_model.bin
+config.json
+
+# HuggingFace cache (optional)
+~/.cache/huggingface/
+huggingface/
+
+# === FastAPI logs & temp ===
+*.db
+*.sqlite3
+*.log
+*.pid
+
+# === Streamlit Cache ===
+.streamlit/
+__pycache__/
+.st/
+
+# === Misc ===
+*.bak
+*.tmp
+*.orig
+*.old
