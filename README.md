@@ -36,10 +36,6 @@ This project allows natural language querying of a financial MongoDB database us
 
 ---
 
-Here’s a clear and professional attribution statement for the **Kaggle financial dataset** you used earlier, which you can include in your `README.md`, documentation, or app footer:
-
----
-
 ## 📊 Dataset Attribution
 
 This project utilizes a financial dataset originally sourced from [Kaggle](https://www.kaggle.com/) for demonstration and experimentation purposes.
@@ -61,7 +57,10 @@ It includes anonymized financial and customer analytics data, ideal for demonstr
 ```ini
 MONGO_USER=your_mongodb_user
 MONGO_PASS=your_mongodb_password
-DATABASE_NAME=sylvr_finance
+DATABASE_NAME=sylvr_finance_db
+MONGO_URI=mongodb+srv://sylvr_user:securepassword123@sylvr-financial-cluster.jz9cn66.mongodb.net/?retryWrites=true&w=majority
+OPENAI_API_KEY=sk-proj-zSS****
+HUGGINGFACE_API_KEY=hf_R****
 ```
 
 ---
