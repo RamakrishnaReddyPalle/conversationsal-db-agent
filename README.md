@@ -37,18 +37,13 @@ This project allows natural language querying of a financial MongoDB database us
 ---
 
 ## ⚙️ .env Setup
-
-Create a `.env` file (DON’T commit it to Git):
-
 ```ini
 MONGO_USER=your_mongodb_user
 MONGO_PASS=your_mongodb_password
 DATABASE_NAME=sylvr_finance
 ```
 
-### ❗ Never push `.env` to GitHub
-
-To exclude secrets from your repo:
+To exclude secrets from this repo:
 
 ```bash
 echo ".env" >> .gitignore
@@ -97,8 +92,8 @@ echo ".env" >> .gitignore
 ### 1. Clone Repo & Install
 
 ```bash
-git clone https://github.com/yourname/mongo-conversational-agent.git
-cd mongo-conversational-agent
+git clone [https://github.com/yourname/mongo-conversational-agent.git](https://github.com/RamakrishnaReddyPalle/conversationsal-db-agent.git)
+cd conversational-db-agent
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
@@ -144,32 +139,13 @@ http://localhost:8501
 
 ## 🐳 Docker Deployment
 
-### 1. Dockerfile
-
-Create a file `Dockerfile`:
-
-```dockerfile
-FROM python:3.10-slim
-
-WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-EXPOSE 8000
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-```
-
-### 2. Build Docker Image
+### 1. Build Docker Image
 
 ```bash
 docker build -t mongo-agent .
 ```
 
-### 3. Run Docker Container
+### 2. Run Docker Container
 
 ```bash
 docker run -d -p 8000:8000 --env-file .env mongo-agent
