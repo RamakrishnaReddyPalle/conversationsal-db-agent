@@ -178,3 +178,51 @@ docker run -d -p 8000:8000 --env-file .env mongo-agent
    natural_query = Show me all transactions over $1000 in the last 7 days
    ```
 3. Check returned MongoDB query, results, and summary.
+
+---
+
+### Further Improvements & Feature Plan
+
+Due to the limited time window, I focused on delivering a robust end-to-end agent that:
+
+* Converts natural language into accurate MongoDB queries
+* Executes real-time queries across **multiple financial collections**
+* Summarizes results into concise natural language outputs
+* Provides an intuitive **Streamlit-based user interface**
+
+That said, I wasn’t able to complete all secondary and bonus features. Below is a summary of what I would implement next if given more time:
+
+#### ✅ What I’ve Partially Implemented or Plan to Add
+
+* **Conversation Memory (Context Handling):**
+  Currently, the agent supports single-turn queries. My next step would be to integrate **LangChain’s `ConversationBufferMemory`** or use simple in-memory structures to enable multi-turn interactions, allowing the agent to maintain and use context across a session.
+
+* **Error Handling for Ambiguous or Invalid Queries:**
+  I would introduce a validation module that detects ambiguous queries, suggests clarifications, and gracefully handles MongoDB-specific errors or malformed inputs.
+
+* **World Model / Insights Dashboard:**
+  I’ve laid the foundation with result summarization. Building on this, I plan to create a dynamic **financial insights dashboard** using Plotly or Altair, especially useful for analyzing trends in stock or transaction data.
+
+* **Chained Querying in Multi-Turn Conversations:**
+  With memory in place, I aim to support linked queries in a single thread—for example: “Show me a customer’s accounts” → “Now get their last 5 transactions”.
+
+#### 🚀 Features I Would Build with More Time
+
+* **Voice Interface (Speech-to-Text / Text-to-Speech):**
+  I’d add **voice input** using Whisper or a similar STT model, and respond using a lightweight TTS system to make the agent conversational in a more natural sense.
+
+* **Query Optimization:**
+  I plan to implement basic query optimization strategies—like suggesting indexes or reducing projection fields dynamically—to improve performance on large datasets.
+
+* **Dockerization:**
+  I would containerize the application with a well-defined `Dockerfile` to enable quick deployment across environments, with support for injecting environment variables securely.
+
+* **Colab Notebook Demo:**
+  For users who prefer notebooks or lack a local setup, I’d create a Google Colab version to demonstrate each module—from query parsing to response generation—step by step.
+
+#### 🧱 Code Architecture & Extensibility
+
+* I’ve structured the codebase into clear, reusable modules (`query_builder`, `query_executor`, `summarizer`, `langchain_agent`, etc.)
+* The `.env` file keeps credentials secure and decoupled from code.
+* The app is easy to extend for new MongoDB collections, different agents, or even multi-modal inputs.
+
