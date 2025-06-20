@@ -36,6 +36,27 @@ This project allows natural language querying of a financial MongoDB database us
 
 ---
 
+Here’s a clear and professional attribution statement for the **Kaggle financial dataset** you used earlier, which you can include in your `README.md`, documentation, or app footer:
+
+---
+
+## 📊 Dataset Attribution
+
+This project utilizes a financial dataset originally sourced from [Kaggle](https://www.kaggle.com/) for demonstration and experimentation purposes.
+
+**Dataset Title:** Huge Stock Market Dataset
+**Source:** Kaggle Dataset URL - https://www.kaggle.com/datasets/borismarjanovic/price-volume-data-for-all-us-stocks-etfs/data
+
+The dataset contains anonymized financial records including **stocks, ETFs**, and has been preprocessed to suit MongoDB storage and natural language querying tasks.
+
+### 📦 MongoDB Sample Dataset
+
+This project also uses the **`sample_analytics`** dataset provided by [MongoDB Atlas Sample Datasets](https://www.mongodb.com/docs/atlas/sample-data/).
+It includes anonymized financial and customer analytics data, ideal for demonstrating aggregation pipelines and query generation tasks.
+
+> ✅ All data is used under the terms of the Kaggle dataset's open license. Please refer to the [dataset page](https://www.kaggle.com/) for licensing and citation requirements.
+
+---
 ## ⚙️ .env Setup
 ```ini
 MONGO_USER=your_mongodb_user
