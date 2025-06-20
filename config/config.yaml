@@ -1,0 +1,7 @@
+db:
+  uri: ${MONGO_URI}
+  name: ${DB_NAME}
+
+llm:
+  provider: openai
+  model: gpt-4
