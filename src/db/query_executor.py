@@ -1,6 +1,7 @@
 from pymongo import MongoClient
-from config.config import settings  # assuming settings has Mongo URI
+from config.config import settings
 from bson import json_util
+
 client = MongoClient(settings.mongo_db)
 db = client[settings.mongo_db]
 
